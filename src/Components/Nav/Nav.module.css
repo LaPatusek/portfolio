@@ -1,0 +1,36 @@
+.nav {
+  position: absolute;
+  right: 2rem;
+  top: 4rem;
+  transform: perspective(1000px) rotateY(-18deg);
+  display: grid;
+  row-gap: 20px;
+}
+
+.nav a {
+  user-select: none;
+  position: relative;
+  width: fit-content;
+  margin-left: auto;
+  font-size: 2.8rem;
+  color: rgba(247, 230, 249, 0.9);
+  letter-spacing: 0.6px;
+  transition: all 0.4s;
+}
+
+.nav a:hover,
+.nav a:focus {
+  text-shadow: 0.06em 0.05em 0 #e3251c;
+}
+
+.nav a::before {
+  content: '> ';
+  opacity: 0;
+  text-shadow: 0.06em 0.05em 0 #e3251c;
+  transition: all 0.4s;
+}
+
+.nav a:hover::before,
+.nav a:focus::before {
+  opacity: 1;
+}

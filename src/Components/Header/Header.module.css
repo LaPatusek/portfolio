@@ -1,0 +1,54 @@
+.header-wrap {
+  position: relative;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+.header {
+  transform: perspective(1500px) rotateY(18deg);
+  position: absolute;
+  left: 4rem;
+  top: 4rem;
+}
+
+.header h1,
+.header h2,
+.header h3 {
+  color: #f7e6f9;
+  text-transform: uppercase;
+  user-select: none;
+  text-shadow: 0.06em 0.05em 0 #f232ea, -0.05em -0.05em 0 #1413e5;
+  font-style: italic;
+  letter-spacing: 4px;
+  filter: blur(1px);
+}
+
+.header h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.header h2 {
+  font-size: 5rem;
+  line-height: 5.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.header h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.header-wrap span {
+  position: absolute;
+  left: 0.68rem;
+  bottom: 2rem;
+  transform: perspective(1500px) rotateY(18deg);
+  font-size: 10rem;
+  color: rgba(169, 159, 170, 0.3);
+  text-transform: uppercase;
+  font-style: italic;
+  filter: blur(1px);
+  letter-spacing: 14px;
+  user-select: none;
+}
