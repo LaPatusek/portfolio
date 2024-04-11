@@ -1,5 +1,14 @@
 @import './css-reset.css';
 
+:root {
+  --vhs-white: #f7e6f9;
+  --vhs-light-blue: #1fc9fd;
+  --vhs-pink: #f232ea;
+  --vhs-red: #e3251c;
+  --vhs-blue: #1413e5;
+  --vhs-black: #120614;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -20,4 +29,20 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.active {
+  text-shadow: 0.06em 0.05em 0 #e3251c;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.relative {
+  position: relative;
 }

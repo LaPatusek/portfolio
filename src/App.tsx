@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import Header from './Components/Header/Header';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import Nav from './Components/Nav/Nav';
+import About from './Pages/About';
+import Kontakt from './Pages/Kontakt';
+import Main from './Pages/Main';
+import Projects from './Pages/Projects';
 
 function App() {
   const { pathname, hash, key } = useLocation();
@@ -21,8 +25,15 @@ function App() {
 
   return (
     <div>
-      <Header />
-      {/* body */}
+      <Nav />
+
+      <Routes>
+        <Route element={<Main />} path='/' />
+        <Route element={<About />} path='/about' />
+        <Route element={<Projects />} path='/projekty' />
+        <Route element={<Kontakt />} path='/kontakt' />
+        <Route element={<Main />} path='*' />
+      </Routes>
     </div>
   );
 }

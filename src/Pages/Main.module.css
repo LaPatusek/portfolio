@@ -1,11 +1,11 @@
 .header-wrap {
-  position: relative;
   height: 100dvh;
   width: 100dvw;
 }
 
 .header {
   transform: perspective(1500px) rotateY(18deg);
+  transform-style: preserve-3d;
   position: absolute;
   left: 4rem;
   top: 4rem;
@@ -39,16 +39,17 @@
   font-weight: bold;
 }
 
-.header-wrap span {
+.header-wrap p {
   position: absolute;
-  left: 0.68rem;
+  left: 4rem;
   bottom: 2rem;
+  width: 50%;
   transform: perspective(1500px) rotateY(18deg);
-  font-size: 10rem;
+  font-size: 2.7rem;
   color: rgba(169, 159, 170, 0.3);
   text-transform: uppercase;
   font-style: italic;
   filter: blur(1px);
-  letter-spacing: 14px;
+  letter-spacing: 2px;
   user-select: none;
 }

@@ -1,6 +1,5 @@
 import React from 'react';
-import Nav from '../Nav/Nav';
-import styles from './Header.module.css';
+import styles from './Main.module.css';
 
 const Header: React.FC = () => {
   const today = new Date();
@@ -13,7 +12,7 @@ const Header: React.FC = () => {
   const month = today.toLocaleString('default', { month: 'long' });
 
   return (
-    <div className={styles['header-wrap']}>
+    <div className={`${styles['header-wrap']} relative`}>
       <div className={styles.header}>
         <h1>Dawid Rusin</h1>
         <h2>Front-End Developer</h2>
@@ -21,9 +20,11 @@ const Header: React.FC = () => {
           {hours} {date} {month}, 2002
         </h3>
       </div>
-      <span>Witaj</span>
-
-      <Nav />
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor
+        mi lectus, id fermentum mauris luctus eget. Aliquam tristique semper
+        gravida.
+      </p>
     </div>
   );
 };
