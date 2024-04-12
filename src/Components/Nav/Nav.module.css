@@ -1,6 +1,6 @@
 .nav {
   z-index: 55;
-  position: absolute;
+  position: fixed;
   right: 2rem;
   top: 4rem;
   transform: perspective(1000px) rotateY(-18deg);
