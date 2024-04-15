@@ -135,6 +135,47 @@
   transform-origin: -100px;
 }
 
+.hobby {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  transform: translateX(-8px);
+  margin-bottom: 4rem;
+}
+
+.hobby img {
+  justify-self: left;
+  max-height: 550px;
+  filter: blur(1px);
+  transform: scaleX(-100%);
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hobby-text {
+  position: relative;
+  margin-top: 44px;
+  transform: perspective(1500px) rotateY(18deg);
+  transform-origin: 0px;
+}
+
+.hobby-text h5 {
+  color: var(--vhs-white);
+  text-shadow: -1px -1px 0px var(--vhs-light-blue), 1px 1px 0px var(--vhs-red);
+  filter: blur(1px);
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  user-select: none;
+}
+
+.hobby-text p {
+  color: var(--vhs-white);
+  width: 70%;
+  font-size: 24px;
+  letter-spacing: 0.2px;
+}
+
 .cv {
   width: 70%;
   margin: 2rem auto;
@@ -145,6 +186,9 @@
 
 .cv a,
 .cv button {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
   cursor: pointer;
   justify-self: center;
   text-transform: uppercase;
@@ -154,4 +198,20 @@
   padding: 1rem 4rem;
   font-size: 24px;
   text-align: center;
+  letter-spacing: 0.4px;
+  transition: all 0.4s;
+}
+
+.cv img {
+  transform: translateY(-2px);
+  transition: all 0.25s;
+}
+
+.cv button:hover,
+.cv a:hover {
+  text-shadow: 2px 2px 1px var(--vhs-red);
+}
+
+.cv:hover img {
+  filter: drop-shadow(2px 2px 1px var(--vhs-red));
 }

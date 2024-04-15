@@ -1,6 +1,8 @@
 import { Clock } from 'iconsax-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ArrowRight from '../Assets/caret-forward-outline.svg';
+import CarImage from '../Assets/dritf.jpg';
 import styles from './About.module.css';
 
 const About: React.FC = () => {
@@ -119,9 +121,22 @@ const About: React.FC = () => {
       <div className={styles.hobbies}>
         <h4>Zainteresowania</h4>
         <div className={styles.hobby}>
-          <div>Zdjęcie</div>
+          <img src={CarImage} alt='Screenshot from Youtube' />
           <div className={styles['hobby-text']}>
-            <h5>Lorem ipsum dolor sit amet</h5>
+            <h5>Motoryzacja</h5>
+            <p>
+              consectetur adipiscing elit. Nullam auctor mi lectus, id fermentum
+              mauris luctus eget. Aliquam tristique semper gravida. Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Nullam auctor mi
+              lectus
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.hobby}>
+          <img src={CarImage} alt='Screenshot from Youtube' />
+          <div className={styles['hobby-text']}>
+            <h5>Gry komputerowe</h5>
             <p>
               consectetur adipiscing elit. Nullam auctor mi lectus, id fermentum
               mauris luctus eget. Aliquam tristique semper gravida. Lorem ipsum
@@ -133,9 +148,15 @@ const About: React.FC = () => {
       </div>
 
       <div className={styles.cv}>
-        <button>CV</button>
-        <Link to='/kontakt'>kontakt</Link>
-        <button>trzeci </button>
+        <button>
+          CV <img src={ArrowRight} alt='' />
+        </button>
+        <Link to='/kontakt'>
+          kontakt <img src={ArrowRight} alt='' />
+        </Link>
+        <button>
+          trzeci <img src={ArrowRight} alt='' />
+        </button>
       </div>
     </div>
   );
