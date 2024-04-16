@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
+import Footer from './Components/Footer/Footer';
 import Nav from './Components/Nav/Nav';
 import About from './Pages/About';
 import Kontakt from './Pages/Kontakt';
@@ -27,13 +28,19 @@ function App() {
     <div>
       <Nav />
 
-      <Routes>
-        <Route element={<Main />} path='/' />
-        <Route element={<About />} path='/about' />
-        <Route element={<Projects />} path='/projekty' />
-        <Route element={<Kontakt />} path='/kontakt' />
-        <Route element={<Main />} path='*' />
-      </Routes>
+      <main>
+        <Routes>
+          <Route element={<Main />} path='/' />
+          <Route element={<About />} path='/about' />
+          <Route element={<Projects />} path='/projekty' />
+          <Route element={<Kontakt />} path='/kontakt' />
+          <Route element={<Main />} path='*' />
+        </Routes>
+      </main>
+
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
