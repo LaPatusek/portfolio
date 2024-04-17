@@ -3,56 +3,63 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ArrowRight from '../Assets/caret-forward-outline.svg';
 import CarImage from '../Assets/dritf.jpg';
+import Card from '../Components/UI/Card';
 import styles from './About.module.css';
 
 const About: React.FC = () => {
   const courses = [
     {
-      heading: 'Lorem ipsum dolor sit amet1',
+      heading: 'Version Control',
+      year: 2024,
+      content:
+        'consectetur adipiscing elit. Nullam auctor mi lectus, id fermentum mauris luctus eget. Aliquam tristique semper gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor mi lectus',
+    },
+    {
+      heading: 'Understanding TypeScript',
+      year: 2024,
+      content:
+        'consectetur adipiscing elit. Nullam auctor mi lectus, id fermentum mauris luctus eget. Aliquam tristique semper gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor mi lectus',
+    },
+    {
+      heading: 'CSS – The Complete Guide (incl. Flexbox, Grid & SASS)',
+      year: 2023,
+      content:
+        'consectetur adipiscing elit. Nullam auctor mi lectus, id fermentum mauris luctus eget. Aliquam tristique semper gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor mi lectus',
+    },
+    {
+      heading: 'React – The Complete Guide (incl. Hooks, React Router, Redux)',
       year: 2022,
       content:
         'consectetur adipiscing elit. Nullam auctor mi lectus, id fermentum mauris luctus eget. Aliquam tristique semper gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor mi lectus',
     },
     {
-      heading: 'Lorem ipsum dolor sit amet2',
+      heading: 'Projektowanie stron internetowych',
       year: 2022,
       content:
         'consectetur adipiscing elit. Nullam auctor mi lectus, id fermentum mauris luctus eget. Aliquam tristique semper gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor mi lectus',
     },
     {
-      heading: 'Lorem ipsum dolor sit amet3',
+      heading: 'Zespół Szkół Technicznych w Strzyżowie',
       year: 2022,
       content:
-        'consectetur adipiscing elit. Nullam auctor mi lectus, id fermentum mauris luctus eget. Aliquam tristique semper gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor mi lectus',
+        'Specjalizacja: Technik Informatyk, \nPoziom wykształcenia: średnie',
     },
     {
-      heading: 'Lorem ipsum dolor sit amet4',
+      heading: 'Kwalifikacja zawodowa: EE.09',
       year: 2022,
       content:
-        'consectetur adipiscing elit. Nullam auctor mi lectus, id fermentum mauris luctus eget. Aliquam tristique semper gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor mi lectus',
+        'Programowanie, tworzenie i administrowanie stronami internetowymi i bazami danych',
     },
     {
-      heading: 'Lorem ipsum dolor sit amet5',
-      year: 2022,
+      heading: 'Kwalifikacja zawodowa: EE.08',
+      year: 2021,
       content:
-        'consectetur adipiscing elit. Nullam auctor mi lectus, id fermentum mauris luctus eget. Aliquam tristique semper gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor mi lectus',
-    },
-    {
-      heading: 'Lorem ipsum dolor sit amet6',
-      year: 2022,
-      content:
-        'consectetur adipiscing elit. Nullam auctor mi lectus, id fermentum mauris luctus eget. Aliquam tristique semper gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor mi lectus',
-    },
-    {
-      heading: 'Lorem ipsum dolor sit amet7',
-      year: 2022,
-      content:
-        'consectetur adipiscing elit. Nullam auctor mi lectus, id fermentum mauris luctus eget. Aliquam tristique semper gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor mi lectus',
+        'Montaż i eksploatacja systemów komputerowych, urządzeń peryferyjnych i sieci',
     },
   ];
 
   return (
-    <div className={styles.title}>
+    <Card>
       <div className={styles['about-title']}>
         <h1>Kilka słów o mnie</h1>
         <p>
@@ -68,13 +75,14 @@ const About: React.FC = () => {
         <h2>Doświadczenie zawodowe</h2>
         <ol>
           <li>
-            <div className={styles.heading}>
-              <h3>Lorem ipsum dolor sit amet</h3>
+            <div className={`${styles.heading} flex`}>
+              <h3>React Developer / Strony na Wypasie</h3>
               <span>
                 <Clock variant='Bold' size={14} /> 2023
               </span>
             </div>
             <p>
+              Pół roczny miesięczny staż
               consectetur adipiscing elit. Nullam auctor mi lectus, id fermentum
               mauris luctus eget. Aliquam tristique semper gravida. Lorem ipsum
               dolor sit amet, consectetur adipiscing elit. Nullam auctor mi
@@ -83,14 +91,14 @@ const About: React.FC = () => {
           </li>
 
           <li>
-            <div className={styles.heading}>
-              <h3>Lorem ipsum dolor sit amet</h3>
+            <div className={`${styles.heading} flex`}>
+              <h3>Stażysta / SELENBIT</h3>
               <span>
                 <Clock variant='Bold' size={14} /> 2022
               </span>
             </div>
             <p>
-              consectetur adipiscing elit. Nullam auctor mi lectus, id fermentum
+              2 miesięczne praktyki consectetur adipiscing elit. Nullam auctor mi lectus, id fermentum
               mauris luctus eget. Aliquam tristique semper gravida. Lorem ipsum
               dolor sit amet, consectetur adipiscing elit. Nullam auctor mi
               lectus
@@ -105,7 +113,7 @@ const About: React.FC = () => {
           {courses.map((course) => {
             return (
               <li key={course.heading}>
-                <div className={styles.heading}>
+                <div className={`${styles.heading} flex`}>
                   <h3>{course.heading}</h3>
                   <span>
                     <Clock variant='Bold' size={14} /> {course.year}
@@ -120,7 +128,7 @@ const About: React.FC = () => {
 
       <div className={styles.hobbies}>
         <h4>Zainteresowania</h4>
-        <div className={styles.hobby}>
+        <div className={`${styles.hobby} grid`}>
           <img src={CarImage} alt='Screenshot from Youtube' />
           <div className={styles['hobby-text']}>
             <h5>Motoryzacja</h5>
@@ -133,7 +141,7 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        <div className={styles.hobby}>
+        <div className={`${styles.hobby} grid`}>
           <img src={CarImage} alt='Screenshot from Youtube' />
           <div className={styles['hobby-text']}>
             <h5>Gry komputerowe</h5>
@@ -147,18 +155,18 @@ const About: React.FC = () => {
         </div>
       </div>
 
-      <div className={styles.cv}>
-        <button>
-          CV <img src={ArrowRight} alt='' />
-        </button>
+      <div className={`${styles.cv} grid`}>
+        <a href='cv'>
+          CV <img src={ArrowRight} alt='CV' />
+        </a>
         <Link to='/kontakt'>
-          kontakt <img src={ArrowRight} alt='' />
+          kontakt <img src={ArrowRight} alt='Kontakt' />
         </Link>
-        <button>
-          trzeci <img src={ArrowRight} alt='' />
-        </button>
+        <a href='https://github.com/LaPatusek'>
+          github <img src={ArrowRight} alt='GitHub' />
+        </a>
       </div>
-    </div>
+    </Card>
   );
 };
 

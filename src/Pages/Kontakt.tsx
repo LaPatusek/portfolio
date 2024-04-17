@@ -1,5 +1,6 @@
 import { Heart } from 'iconsax-react';
 import React, { useState } from 'react';
+import Card from '../Components/UI/Card';
 import useInput from '../Components/hooks/useInput';
 import styles from './Kontakt.module.css';
 
@@ -71,7 +72,7 @@ const Kontakt: React.FC = () => {
   };
 
   return (
-    <div className={styles.kontakt}>
+    <Card className={styles.kontakt}>
       <div className={styles['kontakt-title']}>
         <h1>Skontaktuj się ze mną</h1>
         <h2>
@@ -127,7 +128,7 @@ const Kontakt: React.FC = () => {
             Dziękuje za kontakt</div>
         )}
       </form>
-    </div>
+    </Card>
   );
 };
 

@@ -1,10 +1,11 @@
 import React from 'react';
 import propImg from '../Assets/dritf.jpg';
+import Card from '../Components/UI/Card';
 import styles from './Projects.module.css';
 
 const Projects: React.FC = () => {
   return (
-    <div className={styles.wrap}>
+    <Card>
       <div className={styles['projects-title']}>
         <h1>Projects</h1>
         <h2>
@@ -13,11 +14,11 @@ const Projects: React.FC = () => {
           gravida.
         </h2>
       </div>
-      <div className={styles.projects}>
+      <div className={`${styles.projects} grid`}>
         <div className={styles.box}>
           <img src={propImg} alt='' />
           <div className={styles['box-text']}>
-            <h3>Lorem ipsum dolor</h3>
+            <h3>AGMI TRANSPORT</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
@@ -25,7 +26,7 @@ const Projects: React.FC = () => {
         <div className={styles.box}>
           <img src={propImg} alt='' />
           <div className={styles['box-text']}>
-            <h3>Lorem ipsum dolor</h3>
+            <h3>City of Lights</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
@@ -33,7 +34,7 @@ const Projects: React.FC = () => {
         <div className={styles.box}>
           <img src={propImg} alt='' />
           <div className={styles['box-text']}>
-            <h3>Lorem ipsum dolor</h3>
+            <h3>Strony na Wypasie</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
@@ -41,12 +42,44 @@ const Projects: React.FC = () => {
         <div className={styles.box}>
           <img src={propImg} alt='' />
           <div className={styles['box-text']}>
-            <h3>Lorem ipsum dolor</h3>
+            <h3>Excel na Wypasie</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+
+        <div className={styles.box}>
+          <img src={propImg} alt='' />
+          <div className={styles['box-text']}>
+            <h3>SELENBIT</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+
+        <div className={styles.box}>
+          <img src={propImg} alt='' />
+          <div className={styles['box-text']}>
+            <h3>Portfolio</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+
+        <div className={styles.box}>
+          <img src={propImg} alt='' />
+          <div className={styles['box-text']}>
+            <h3>Excel Rzeszów</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+
+        <div className={styles.box}>
+          <img src={propImg} alt='' />
+          <div className={styles['box-text']}>
+            <h3>Zakład Fryzjerski</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
       </div>
-    </div>
+    </Card>
   );
 };
 

@@ -1,8 +1,5 @@
 .kontakt {
-  width: fit-content;
-  padding-left: 4rem;
-  padding-top: 4rem;
-  padding-bottom: 2rem;
+  height: 100dvh;
 }
 
 .kontakt-title {
@@ -80,8 +77,8 @@
 
 .kontakt form button:hover {
   color: transparent;
-  text-shadow: -1px -1px 0px var(--vhs-light-blue), 1px 1px 0px var(--vhs-red);
   border: 1px solid transparent;
+  text-shadow: -1px -1px 0px var(--vhs-light-blue), 1px 1px 0px var(--vhs-red);
   box-shadow: -1px -1px 0px var(--vhs-light-blue), 1px 1px 0px var(--vhs-red);
 }
 
