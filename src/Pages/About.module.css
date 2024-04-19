@@ -198,3 +198,62 @@
 .cv:hover img {
   filter: drop-shadow(2px 2px 1px var(--vhs-red));
 }
+
+@media screen and (max-width: 900px) {
+  .about-title {
+    padding-bottom: 1rem;
+    margin: 0 10px;
+  }
+
+  .about-title h1 {
+    width: 80%;
+  }
+
+  .about-title p {
+    transform: perspective(1500px) rotateY(10deg);
+    font-size: 28px;
+    width: 100%;
+  }
+
+  .section-wrap {
+    margin: 0 10px;
+  }
+
+  .heading span {
+    display: flex;
+    align-self: center;
+    font-size: 18px;
+    color: rgba(247, 230, 249, 0.9);
+    width: fit-content;
+  }
+
+  .heading span > svg {
+    transform: translateY(1.5px);
+  }
+
+  .section-wrap ol {
+    width: 100%;
+  }
+
+  .hobbies {
+    margin: 0 10px;
+  }
+
+  .hobby {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .hobby img {
+    width: 100%;
+  }
+
+  .hobby-text {
+    margin-top: 14px; 
+  }
+
+  .cv {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 25px;
+  }
+}

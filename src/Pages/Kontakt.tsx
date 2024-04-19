@@ -76,7 +76,7 @@ const Kontakt: React.FC = () => {
       <div className={styles['kontakt-title']}>
         <h1>Skontaktuj się ze mną</h1>
         <h2>
-          Poprzez formularz kontaktowy lub <br /> bezpośrednio na{' '}
+          Poprzez formularz kontaktowy lub bezpośrednio na{' '}
           <span>rusin.dawid18@gmail.com</span>
         </h2>
       </div>

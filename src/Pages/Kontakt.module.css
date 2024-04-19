@@ -96,3 +96,22 @@
   filter: drop-shadow(-3px -2px 2px var(--vhs-blue))
     drop-shadow(3px 2px 2px var(--vhs-red));
 }
+
+@media screen and (max-width: 900px) {
+  .kontakt {
+    display: grid;
+    align-content: center;
+  }
+
+  .kontakt-title {
+    padding-bottom: 1rem;
+  }
+
+  .kontakt-title h1 {
+    font-size: 2.8rem;
+  }
+
+  .kontakt-title h2 {
+    font-size: 20px;
+  }
+}

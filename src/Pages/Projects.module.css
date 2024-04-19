@@ -38,6 +38,7 @@
 
 .box img {
   width: 100%;
+  min-height: 300px;
 }
 
 .box-text {
@@ -56,4 +57,25 @@
   color: rgba(247, 230, 249, 0.6);
   font-size: 18px;
   letter-spacing: 0.4px;
+}
+
+@media screen and (max-width: 900px) {
+  .projects-title {
+    padding-bottom: 1rem;
+  }
+
+  .projects-title h2 {
+    width: 85%;
+    font-size: 28px;
+  }
+
+  .projects {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+  }
+
+  .box img {
+    object-fit: cover;
+  }
 }

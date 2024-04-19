@@ -82,11 +82,10 @@ const About: React.FC = () => {
               </span>
             </div>
             <p>
-              Pół roczny miesięczny staż
-              consectetur adipiscing elit. Nullam auctor mi lectus, id fermentum
-              mauris luctus eget. Aliquam tristique semper gravida. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Nullam auctor mi
-              lectus
+              Pół roczny miesięczny staż consectetur adipiscing elit. Nullam
+              auctor mi lectus, id fermentum mauris luctus eget. Aliquam
+              tristique semper gravida. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Nullam auctor mi lectus
             </p>
           </li>
 
@@ -98,10 +97,10 @@ const About: React.FC = () => {
               </span>
             </div>
             <p>
-              2 miesięczne praktyki consectetur adipiscing elit. Nullam auctor mi lectus, id fermentum
-              mauris luctus eget. Aliquam tristique semper gravida. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Nullam auctor mi
-              lectus
+              2 miesięczne praktyki consectetur adipiscing elit. Nullam auctor
+              mi lectus, id fermentum mauris luctus eget. Aliquam tristique
+              semper gravida. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Nullam auctor mi lectus
             </p>
           </li>
         </ol>
@@ -162,7 +161,7 @@ const About: React.FC = () => {
         <Link to='/kontakt'>
           kontakt <img src={ArrowRight} alt='Kontakt' />
         </Link>
-        <a href='https://github.com/LaPatusek'>
+        <a href='https://github.com/LaPatusek' target='_blank' rel='noreferrer'>
           github <img src={ArrowRight} alt='GitHub' />
         </a>
       </div>

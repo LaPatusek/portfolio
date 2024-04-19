@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import styles from './Main.module.css';
 
@@ -12,7 +13,13 @@ const Header: React.FC = () => {
   const month = today.toLocaleString('default', { month: 'long' });
 
   return (
-    <div className={`${styles['header-wrap']} relative`}>
+    <motion.div
+      className={`${styles['header-wrap']} relative`}
+      initial={{ filter: 'blur(10px)', opacity: 0 }}
+      animate={{ filter: 'blur(0px)', opacity: 1 }}
+      exit={{ filter: 'blur(10px)', opacity: 0 }}
+      transition={{ duration: 0.25 }}
+    >
       <div className={styles.header}>
         <h1>Dawid Rusin</h1>
         <h2>Front-End Developer</h2>
@@ -25,7 +32,7 @@ const Header: React.FC = () => {
         mi lectus, id fermentum mauris luctus eget. Aliquam tristique semper
         gravida.
       </p>
-    </div>
+    </motion.div>
   );
 };
 

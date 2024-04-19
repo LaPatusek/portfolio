@@ -2,3 +2,9 @@
   width: fit-content;
   padding: 4rem 0 2rem 2rem;
 }
+
+@media screen and (max-width: 900px) {
+  .card {
+    padding: 3rem 10px 2rem 10px;
+  }
+}
