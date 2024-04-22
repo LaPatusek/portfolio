@@ -36,7 +36,7 @@
 
 .kontakt form input,
 .kontakt form textarea {
-  width: 92%;
+  width: 62.5%;
   padding: 6px 12px;
   font-size: 24px;
   border-radius: 4px;
@@ -76,10 +76,8 @@
 }
 
 .kontakt form button:hover {
-  color: transparent;
-  border: 1px solid transparent;
-  text-shadow: -1px -1px 0px var(--vhs-light-blue), 1px 1px 0px var(--vhs-red);
-  box-shadow: -1px -1px 0px var(--vhs-light-blue), 1px 1px 0px var(--vhs-red);
+  color: var(--vhs-black);
+  background-color: var(--vhs-white);
 }
 
 .mess-after-sent {
@@ -98,11 +96,6 @@
 }
 
 @media screen and (max-width: 900px) {
-  .kontakt {
-    display: grid;
-    align-content: center;
-  }
-
   .kontakt-title {
     padding-bottom: 1rem;
   }
@@ -112,6 +105,11 @@
   }
 
   .kontakt-title h2 {
-    font-size: 20px;
+    font-size: 22px;
+  }
+
+  .kontakt form input,
+  .kontakt form textarea {
+    width: 100%;
   }
 }

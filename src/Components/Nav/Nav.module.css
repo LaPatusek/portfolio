@@ -8,6 +8,10 @@
   row-gap: 20px;
 }
 
+.navbar-800 {
+  display: none;
+}
+
 .nav a {
   user-select: none;
   width: fit-content;
@@ -35,8 +39,30 @@
   opacity: 1;
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width: 900px) {
   .nav {
     display: none;
+  }
+
+  .navbar-800 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5px 10px;
+    justify-content: space-between;
+  }
+
+  .navbar-800 span {
+    margin-top: 4px;
+    font-size: 22px;
+    color: var(--vhs-white);
+    text-shadow: 0.06em 0.05em 0 #f232ea, -0.05em -0.05em 0 #1413e5;
+    filter: blur(1px);
+  }
+
+  .menu-button {
+    justify-self: end;
+    color: var(--vhs-white);
+    filter: blur(1px) drop-shadow(0.06em 0.05em 0 #f232ea)
+      drop-shadow(-0.05em -0.05em 0 #1413e5);
   }
 }

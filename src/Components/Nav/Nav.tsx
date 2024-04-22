@@ -1,3 +1,4 @@
+import { HambergerMenu } from 'iconsax-react';
 import React, { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Nav.module.css';
@@ -20,7 +21,11 @@ const Nav: React.FC = () => {
       </div>
 
       <div className={styles['navbar-800']}>
-        {hours} 
+        <span> {hours} </span>
+        <div className={styles['menu-button']}>
+          {/* Menu */}
+          <HambergerMenu size={29}/>
+        </div>
       </div>
     </Fragment>
   );

@@ -14,7 +14,7 @@ const Header: React.FC = () => {
 
   return (
     <motion.div
-      className={`${styles['header-wrap']} relative`}
+      className={`${styles['header-wrap']} grid`}
       initial={{ filter: 'blur(10px)', opacity: 0 }}
       animate={{ filter: 'blur(0px)', opacity: 1 }}
       exit={{ filter: 'blur(10px)', opacity: 0 }}
