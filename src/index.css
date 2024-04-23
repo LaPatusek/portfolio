@@ -56,10 +56,6 @@ code {
   background-color: #636363;
 }
 
-.active {
-  text-shadow: 0.06em 0.05em 0 #e3251c;
-}
-
 .grid {
   display: grid;
 }
@@ -70,4 +66,18 @@ code {
 
 .relative {
   position: relative;
+}
+
+.active {
+  text-shadow: 0.06em 0.05em 0 #e3251c;
+}
+
+@media screen and (max-width: 900px) {
+  .active::before {
+    content: '> '!important;
+    left: -22px !important;
+    top: 0% !important;
+    height: 0px !important;
+    width: 0px !important;
+  }
 }

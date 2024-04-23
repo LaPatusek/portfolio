@@ -52,6 +52,7 @@
   }
 
   .navbar-800 span {
+    z-index: 99;
     margin-top: 4px;
     font-size: 22px;
     color: var(--vhs-white);
@@ -60,9 +61,60 @@
   }
 
   .menu-button {
+    z-index: 99;
     justify-self: end;
     color: var(--vhs-white);
     filter: blur(1px) drop-shadow(0.06em 0.05em 0 #f232ea)
+      drop-shadow(-0.05em -0.05em 0 #1413e5);
+  }
+
+  .nav-800 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      #120614 25%,
+      #120614 50%,
+      #171819 50%,
+      #171819 75%
+    );
+    background-size: 10px 10px;
+    z-index: 98;
+  }
+
+  .nav-800 ol {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-800 li {
+    text-align: center;
+  }
+
+  .nav-800 li a {
+    position: relative;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--vhs-white);
+    text-shadow: 0.06em 0.05em 0 #f232ea, -0.05em -0.05em 0 #1413e5;
+    filter: blur(1px);
+  }
+
+  .nav-800 li a::before {
+    content: '';
+    position: absolute;
+    left: -18px;
+    top: 47.5%;
+    transform: translateY(-50%);
+    height: 13px;
+    width: 13px;
+    background-color: var(--vhs-white);
+    filter: drop-shadow(0.06em 0.05em 0 #f232ea)
       drop-shadow(-0.05em -0.05em 0 #1413e5);
   }
 }

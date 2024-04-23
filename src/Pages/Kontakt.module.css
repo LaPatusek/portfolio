@@ -96,6 +96,10 @@
 }
 
 @media screen and (max-width: 900px) {
+  .kontakt {
+    height: 95vh;
+  }
+
   .kontakt-title {
     padding-bottom: 1rem;
   }
