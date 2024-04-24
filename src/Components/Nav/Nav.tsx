@@ -20,7 +20,7 @@ const Nav: React.FC = () => {
       menu.classList.remove(styles.active);
       setTimeout(() => {
         setMenuState(false);
-      }, 400);
+      }, 450);
     } else setMenuState(true);
   };
 
@@ -38,8 +38,6 @@ const Nav: React.FC = () => {
         setTimeout(() => {
           menu.classList.add(styles.active);
         }, 10);
-      } else {
-        setTimeout(() => {}, 10);
       }
     }
   }, [menuState]);
@@ -47,10 +45,20 @@ const Nav: React.FC = () => {
   return (
     <Fragment>
       <div className={styles.nav}>
-        <NavLink to='/'>Strona główna</NavLink>
-        <NavLink to='/projekty'>Projekty</NavLink>
-        <NavLink to='/about'>O mnie</NavLink>
-        <NavLink to='/kontakt'>Kontakt</NavLink>
+        <ol>
+          <li>
+            <NavLink to='/'>Strona główna</NavLink>
+          </li>
+          <li>
+            <NavLink to='/projekty'>Projekty</NavLink>
+          </li>
+          <li>
+            <NavLink to='/about'>O mnie</NavLink>
+          </li>
+          <li>
+            <NavLink to='/kontakt'>Kontakt</NavLink>
+          </li>
+        </ol>
       </div>
 
       <div className={styles['navbar-800']}>

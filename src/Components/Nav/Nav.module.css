@@ -1,41 +1,43 @@
 .nav {
-  display: grid;
   z-index: 55;
   position: fixed;
   right: 2rem;
-  top: 4rem;
+  top: 3rem;
   transform: perspective(1000px) rotateY(-18deg);
-  row-gap: 20px;
+  transform-origin: 0;
 }
 
 .navbar-800 {
   display: none;
 }
 
-.nav a {
-  user-select: none;
+.nav li {
   width: fit-content;
-  margin-left: auto;
+  margin: 5px 0 5px auto;
+}
+
+.nav li a {
+  user-select: none;
   font-size: 2.8rem;
   color: rgba(247, 230, 249, 0.9);
   letter-spacing: 0.6px;
   transition: all 0.4s;
 }
 
-.nav a:hover,
-.nav a:focus {
+.nav li a:hover,
+.nav li a:focus {
   text-shadow: 0.06em 0.05em 0 var(--vhs-red);
 }
 
-.nav a::before {
+.nav li a::before {
   content: '> ';
   opacity: 0;
   text-shadow: 0.06em 0.05em 0 var(--vhs-red);
   transition: all 0.4s;
 }
 
-.nav a:hover::before,
-.nav a:focus::before {
+.nav li a:hover::before,
+.nav li a:focus::before {
   opacity: 1;
 }
 
@@ -81,16 +83,11 @@
     );
     background-size: 10px 10px;
     z-index: 98;
-    transition: all 700ms ease-in-out;
+    transition: all 650ms ease-in-out;
   }
 
   .active {
     top: 0%;
-    transition: all 700ms;
-  }
-
-  .nonactive {
-    top: -100%;
   }
 
   .nav-800 ol {
