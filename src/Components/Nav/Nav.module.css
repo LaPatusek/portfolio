@@ -71,7 +71,7 @@
   .nav-800 {
     position: absolute;
     left: 0;
-    top: 0;
+    top: -100%;
     background: repeating-linear-gradient(
       0deg,
       #120614 25%,
@@ -81,6 +81,16 @@
     );
     background-size: 10px 10px;
     z-index: 98;
+    transition: all 700ms ease-in-out;
+  }
+
+  .active {
+    top: 0%;
+    transition: all 700ms;
+  }
+
+  .nonactive {
+    top: -100%;
   }
 
   .nav-800 ol {

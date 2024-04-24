@@ -15,7 +15,13 @@ const Nav: React.FC = () => {
   });
 
   const menuHandler = () => {
-    setMenuState((s) => !s);
+    if (menuState) {
+      const menu = menuRef.current!;
+      menu.classList.remove(styles.active);
+      setTimeout(() => {
+        setMenuState(false);
+      }, 400);
+    } else setMenuState(true);
   };
 
   useEffect(() => {
@@ -26,11 +32,15 @@ const Nav: React.FC = () => {
       document.body.style.overflowY = 'scroll';
     }
 
-    if (menuState) {
-      const menu = menuRef.current!;
-      setTimeout(() => {
-        menu.classList.toggle(styles.active);
-      });
+    const menu = menuRef.current!;
+    if (menu) {
+      if (menuState) {
+        setTimeout(() => {
+          menu.classList.add(styles.active);
+        }, 10);
+      } else {
+        setTimeout(() => {}, 10);
+      }
     }
   }, [menuState]);
 

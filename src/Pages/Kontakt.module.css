@@ -97,7 +97,7 @@
 
 @media screen and (max-width: 900px) {
   .kontakt {
-    height: 95vh;
+    height: calc(100vh - 65px);
   }
 
   .kontakt-title {

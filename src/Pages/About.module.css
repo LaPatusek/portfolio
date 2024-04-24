@@ -206,7 +206,7 @@
   }
 
   .about-title h1 {
-    width: 80%;
+    font-size: 48px;
   }
 
   .about-title p {
@@ -217,6 +217,10 @@
 
   .section-wrap {
     margin: 0 10px;
+  }
+
+  .section-wrap h2 {
+    font-size: 40px;
   }
 
   .heading span {
@@ -239,6 +243,10 @@
     margin: 0 10px;
   }
 
+  .hobbies h4 {
+    font-size: 40px;
+  }
+
   .hobby {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -248,12 +256,17 @@
   }
 
   .hobby-text {
-    margin-top: 14px; 
+    margin-top: 14px;
+  }
+
+  .hobby-text p {
+    width: 100%;
   }
 
   .cv {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
     row-gap: 25px;
+    margin: unset;
   }
 }

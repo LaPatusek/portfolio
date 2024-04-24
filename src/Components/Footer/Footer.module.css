@@ -18,6 +18,7 @@
 
 @media screen and (max-width: 900px) {
   .copyright p {
+    position: relative;
     font-size: 18px;
     right: 5px;
     bottom: 10px;
