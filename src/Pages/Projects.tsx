@@ -7,7 +7,7 @@ const Projects: React.FC = () => {
   return (
     <Card>
       <div className={styles['projects-title']}>
-        <h1>Projects</h1>
+        <h1>Projekty</h1>
         <h2>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor
           mi lectus, id fermentum mauris luctus eget. Aliquam tristique semper

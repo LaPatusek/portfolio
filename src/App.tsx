@@ -26,7 +26,9 @@ function App() {
 
   return (
     <div>
-      <Nav />
+      <nav>
+        <Nav />
+      </nav>
 
       <main>
         <Routes>

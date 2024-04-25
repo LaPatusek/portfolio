@@ -77,7 +77,7 @@ const Kontakt: React.FC = () => {
         <h1>Skontaktuj się ze mną</h1>
         <h2>
           Poprzez formularz kontaktowy lub bezpośrednio na{' '}
-          <span>rusin.dawid18@gmail.com</span>
+          <a href='mailto:rusin.dawid18@gmail.com'>rusin.dawid18@gmail.com</a>
         </h2>
       </div>
 
@@ -124,8 +124,9 @@ const Kontakt: React.FC = () => {
         <button>Wyślij</button>
         {formIsSent && (
           <div className={`${styles['mess-after-sent']} grid`}>
-              <Heart variant='Bold' size={28}/>
-            Dziękuje za kontakt</div>
+            <Heart variant='Bold' size={28} />
+            Dziękuje za kontakt
+          </div>
         )}
       </form>
     </Card>

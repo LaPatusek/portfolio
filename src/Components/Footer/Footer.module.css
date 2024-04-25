@@ -1,11 +1,11 @@
 .copyright p {
   position: absolute;
-  right: 1.5rem;
+  right: 0.5rem;
   bottom: 1rem;
   user-select: none;
   width: fit-content;
   margin-left: auto;
-  font-size: 22px;
+  font-size: 19px;
   letter-spacing: 0.4px;
   font-style: italic;
   color: rgba(247, 230, 249, 0.6);
@@ -14,6 +14,7 @@
 
 .copyright p > svg {
   transform: translateY(1.5px);
+  margin-right: 3px;
 }
 
 @media screen and (max-width: 900px) {
@@ -21,7 +22,7 @@
     position: relative;
     font-size: 18px;
     right: 5px;
-    bottom: 10px;
+    bottom: 5px;
   }
 
   .copyright p > svg {

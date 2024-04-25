@@ -28,9 +28,12 @@ const Header: React.FC = () => {
         </h3>
       </div>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor
-        mi lectus, id fermentum mauris luctus eget. Aliquam tristique semper
-        gravida.
+        Jestem 22 letnim front-end developerem, specjalizuję się w React. Moim
+        głównym celem jest rozwój <br /> i poszerzanie wiedzy.
+        <br />
+        <span>
+          Aktualnie poszukuje pracy lub stażu jako front-end developer.
+        </span>
       </p>
     </motion.div>
   );

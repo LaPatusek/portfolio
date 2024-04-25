@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import styles from './Nav.module.css';
 
 const Nav: React.FC = () => {
-  const [menuState, setMenuState] = useState(false);
+  const [menuState, setMenuState] = useState<boolean>(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
   const today = new Date();
