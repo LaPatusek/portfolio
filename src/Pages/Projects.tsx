@@ -1,121 +1,91 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Portfolio from '../Assets/PortfolioWeb.webp';
 import Card from '../Components/UI/Card';
 import styles from './Projects.module.css';
 
 const Projects: React.FC = () => {
+  const Projekty = [
+    {
+      title: 'AGMI TRANSPORT',
+      desc: 'Strona profesjonalnej firmy logistycznej',
+      class: 'agmi',
+      link: 'https://www.agmitransport.pl/',
+    },
+    {
+      title: 'City of Lights',
+      desc: 'Strona przeznaczona serwerowi GTA RP',
+      class: 'col',
+      link: 'https://devcol.vercel.app/',
+    },
+    {
+      title: 'Strony na Wypasie',
+      desc: 'Strona firmy, z którą współpracowałem. Zajmująca się tworzeniem stron internetowych',
+      class: 'strony-wyp',
+      link: 'https://www.stronynawypasie.pl/',
+    },
+    {
+      title: 'Excel na Wypasie',
+      desc: 'Kursy Excel Online',
+      class: 'excel-wypas',
+      link: 'https://www.excelnawypasie.pl/',
+    },
+    {
+      title: 'SELENBIT',
+      desc: 'Profesjonalne szkolenia na terenie Podkarpacia',
+      class: 'selenbit',
+      link: 'https://www.selenbit.pl/',
+    },
+    {
+      title: 'Excel Rzeszów',
+      desc: 'Szkolenia Excel na terenie Rzeszowa',
+      class: 'excel-rze',
+      link: 'https://www.excelrzeszow.pl/',
+    },
+    {
+      title: 'Zakład Fryzjerski',
+      desc: 'Projekt w trakcie produkcji',
+      class: 'barber',
+      link: 'https://barber-eta-bice.vercel.app/',
+    },
+  ];
+
   return (
     <Card>
       <div className={styles['projects-title']}>
         <h1>Projekty</h1>
         <h2>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor
-          mi lectus, id fermentum mauris luctus eget. Aliquam tristique semper
-          gravida.
+          Najnowsze prace komercyjne, w których wykorzystuję swoje umiejętności
+          i kreatywność w praktyce.
         </h2>
       </div>
       <div className={`${styles.projects} grid`}>
-        <div className={styles.box}>
-          <img
-            src={
-              'https://api.apify.com/v2/key-value-stores/GPZF9d2xRgnlMMttJ/records/www.agmitransport.pl-scroll_lossy-comp'
-            }
-            alt=''
-          />
-          <div className={styles['box-text']}>
-            <h3>AGMI TRANSPORT</h3>
-            <p>Strona profesjonalnej firmy logistycznej</p>
-          </div>
-        </div>
+        {Projekty.map((project) => {
+          const boxStyle = project.class + '-box';
+          const imgStyle = project.class + '-image';
 
-        <div className={styles.box}>
-          <img
-            src={
-              'https://api.apify.com/v2/key-value-stores/ecvWqYJqvoilY9H5L/records/devcol.vercel.app-scroll_lossy-comp'
-            }
-            alt='City of Lights'
-          />
-          <div className={styles['box-text']}>
-            <h3>City of Lights</h3>
-            <p>Strona przeznaczona serwerowi GTA RP</p>
-          </div>
-        </div>
+          return (
+            <a
+              href={project.link}
+              className={`${styles[boxStyle]} ${styles.box}`}
+              key={project.title}
+            >
+              <div className={`${styles[imgStyle]} ${styles['box-img']} `} />
+              <div className={styles['box-text']}>
+                <h3>{project.title}</h3>
+                <p>{project.desc}</p>
+              </div>
+            </a>
+          );
+        })}
 
-        <div className={styles.box}>
-          <img
-            src={
-              '	https://api.apify.com/v2/key-value-stores/eIzQy5YZs8MvzSfAE/records/stronynawypasie.pl-scroll_lossy-comp'
-            }
-            alt='Strony na Wypasie'
-          />
-          <div className={styles['box-text']}>
-            <h3>Strony na Wypasie</h3>
-            <p>
-              Strona firmy, z którą współpracowałem. Zajmująca się tworzeniem
-              stron internetowych
-            </p>
-          </div>
-        </div>
-
-        <div className={styles.box}>
-          <img
-            src={
-              'https://api.apify.com/v2/key-value-stores/G0KLIkLGv7A73VKeR/records/www.excelnawypasie.pl-scroll_lossy-comp'
-            }
-            alt='Excel na Wypasie'
-          />
-          <div className={styles['box-text']}>
-            <h3>Excel na Wypasie</h3>
-            <p>Kursy Excel Online</p>
-          </div>
-        </div>
-
-        <div className={styles.box}>
-          <img
-            src={
-              'https://api.apify.com/v2/key-value-stores/1NGmhcail7Q89XQ61/records/selenbit.pl-scroll_lossy-comp'
-            }
-            alt='SelenBit'
-          />
-          <div className={styles['box-text']}>
-            <h3>SELENBIT</h3>
-            <p>Profesjonalne szkolenia na terenie Podkarpacia</p>
-          </div>
-        </div>
-
-        <div className={styles.box}>
+        <Link to='/' className={styles.box}>
           <img src={Portfolio} alt='Portfolio' />
           <div className={styles['box-text']}>
             <h3>Portfolio</h3>
             <p>Strona, na której obecnie jesteśmy</p>
           </div>
-        </div>
-
-        <div className={styles.box}>
-          <img
-            src={
-              'https://api.apify.com/v2/key-value-stores/DVwBtoJJShIGkeqkj/records/www.excelrzeszow.pl-scroll_lossy-comp'
-            }
-            alt='Excel Rzeszów'
-          />
-          <div className={styles['box-text']}>
-            <h3>Excel Rzeszów</h3>
-            <p>Szkolenia Excel na terenie Rzeszowa</p>
-          </div>
-        </div>
-
-        <div className={styles.box}>
-          <img
-            src={
-              'https://api.apify.com/v2/key-value-stores/qkR4Eg3GxSa1dheyk/records/barber-eta-bice.vercel.app-scroll_lossy-comp'
-            }
-            alt='Zakład Fryzjerski'
-          />
-          <div className={styles['box-text']}>
-            <h3>Zakład Fryzjerski</h3>
-            <p>Projekt w trakcie produkcji</p>
-          </div>
-        </div>
+        </Link>
       </div>
     </Card>
   );

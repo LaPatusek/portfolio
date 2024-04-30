@@ -134,9 +134,20 @@
 .hobby img {
   justify-self: left;
   max-height: 550px;
-  filter: blur(1px);
+  width: 100%;
+  object-fit: cover;
   transform: scaleX(-100%);
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+.drift::before {
+  position: absolute;
+  left: 5px;
+  bottom: 3px;
+  content: 'Joerg Mitter / Red Bull Content Pool';
+  color: white;
+  font-size: 14px;
+  z-index: 2;
 }
 
 .hobby-text {

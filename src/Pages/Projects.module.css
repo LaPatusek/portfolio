@@ -22,9 +22,9 @@
 
 .projects {
   grid-template-columns: repeat(2, 1fr);
-  width: 80%;
+  width: 82.5%;
   row-gap: 35px;
-  column-gap: 25px;
+  column-gap: 20px;
 }
 
 .box {
@@ -35,6 +35,69 @@
   width: 100%;
   min-height: 300px;
   height: 414px;
+}
+
+.box-img {
+  background-size: cover;
+  min-height: 300px;
+  height: 414px;
+  width: 100%;
+}
+
+.agmi-image {
+  background-image: url('../Assets/AgmiStatic.webp');
+}
+
+.agmi-box:hover .agmi-image {
+  background-image: url('https://api.apify.com/v2/key-value-stores/GPZF9d2xRgnlMMttJ/records/www.agmitransport.pl-scroll_lossy-comp');
+}
+
+.col-image {
+  background-image: url('../Assets/CoLStatic.webp');
+}
+
+.col-box:hover .col-image {
+  background-image: url('https://api.apify.com/v2/key-value-stores/ecvWqYJqvoilY9H5L/records/devcol.vercel.app-scroll_lossy-comp');
+}
+
+.strony-wyp-image {
+  background-image: url('../Assets/StronynaWStatic.webp');
+}
+
+.strony-wyp-box:hover .strony-wyp-image {
+  background-image: url('https://api.apify.com/v2/key-value-stores/eIzQy5YZs8MvzSfAE/records/stronynawypasie.pl-scroll_lossy-comp');
+}
+
+.excel-wypas-image {
+  background-image: url('../Assets/ExcelnaWStatic.webp');
+}
+
+.excel-wypas-box:hover .excel-wypas-image {
+  background-image: url('https://api.apify.com/v2/key-value-stores/G0KLIkLGv7A73VKeR/records/www.excelnawypasie.pl-scroll_lossy-comp');
+}
+
+.selenbit-image {
+  background-image: url('../Assets/SelenBitStatic.webp');
+}
+
+.selenbit-box:hover .selenbit-image {
+  background-image: url('https://api.apify.com/v2/key-value-stores/1NGmhcail7Q89XQ61/records/selenbit.pl-scroll_lossy-comp');
+}
+
+.excel-rze-image {
+  background-image: url('../Assets/excelrzeStatic.webp');
+}
+
+.excel-rze-box:hover .excel-rze-image {
+  background-image: url('https://api.apify.com/v2/key-value-stores/DVwBtoJJShIGkeqkj/records/www.excelrzeszow.pl-scroll_lossy-comp');
+}
+
+.barber-image {
+  background-image: url('../Assets/BarberStatic.webp');
+}
+
+.barber-box:hover .barber-image {
+  background-image: url('https://api.apify.com/v2/key-value-stores/qkR4Eg3GxSa1dheyk/records/barber-eta-bice.vercel.app-scroll_lossy-comp');
 }
 
 .box-text {
@@ -72,16 +135,53 @@
   }
 
   .projects-title h2 {
-    width: 85%;
+    width: 95%;
     font-size: 28px;
   }
 
   .projects {
     width: 100%;
-    row-gap: 20px;
+    row-gap: 0px;
   }
 
   .box img {
-    object-fit: cover;
+    margin-top: 70px;
+    min-height: unset;
+    height: fit-content;
+  }
+
+  .box-img {
+    height: unset;
+    background-size: 100% 75%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+
+  .agmi-image {
+    background-image: url('https://api.apify.com/v2/key-value-stores/GPZF9d2xRgnlMMttJ/records/www.agmitransport.pl-scroll_lossy-comp');
+  }
+
+  .col-image {
+    background-image: url('https://api.apify.com/v2/key-value-stores/ecvWqYJqvoilY9H5L/records/devcol.vercel.app-scroll_lossy-comp');
+  }
+
+  .strony-wyp-image {
+    background-image: url('https://api.apify.com/v2/key-value-stores/eIzQy5YZs8MvzSfAE/records/stronynawypasie.pl-scroll_lossy-comp');
+  }
+
+  .excel-wypas-image {
+    background-image: url('https://api.apify.com/v2/key-value-stores/G0KLIkLGv7A73VKeR/records/www.excelnawypasie.pl-scroll_lossy-comp');
+  }
+
+  .selenbit-image {
+    background-image: url('https://api.apify.com/v2/key-value-stores/1NGmhcail7Q89XQ61/records/selenbit.pl-scroll_lossy-comp');
+  }
+
+  .excel-rze-image {
+    background-image: url('https://api.apify.com/v2/key-value-stores/DVwBtoJJShIGkeqkj/records/www.excelrzeszow.pl-scroll_lossy-comp');
+  }
+
+  .barber-image {
+    background-image: url('https://api.apify.com/v2/key-value-stores/qkR4Eg3GxSa1dheyk/records/barber-eta-bice.vercel.app-scroll_lossy-comp');
   }
 }

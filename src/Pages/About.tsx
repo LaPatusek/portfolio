@@ -1,8 +1,9 @@
 import { Clock } from 'iconsax-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Gry from '../Assets/RDR2.webp';
 import ArrowRight from '../Assets/caret-forward-outline.svg';
-import CarImage from '../Assets/dritf.jpg';
+import Motoryzacja from '../Assets/drift-masters.webp';
 import Card from '../Components/UI/Card';
 import styles from './About.module.css';
 
@@ -137,8 +138,8 @@ const About: React.FC = () => {
 
       <div className={styles.hobbies}>
         <h4>Zainteresowania</h4>
-        <div className={`${styles.hobby} grid`}>
-          <img src={CarImage} alt='Screenshot from Youtube' />
+        <div className={`${styles.hobby} ${styles.drift} grid relative`}>
+          <img src={Motoryzacja} alt='Motoryzacja'/>
           <div className={styles['hobby-text']}>
             <h5>Motoryzacja</h5>
             <p>
@@ -152,7 +153,7 @@ const About: React.FC = () => {
         </div>
 
         <div className={`${styles.hobby} grid`}>
-          <img src={CarImage} alt='Screenshot from Youtube' />
+          <img src={Gry} alt='Screenshot from Youtube' />
           <div className={styles['hobby-text']}>
             <h5>Gry komputerowe</h5>
             <p>
