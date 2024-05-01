@@ -1,11 +1,21 @@
+import emailjs from '@emailjs/browser';
 import { Heart } from 'iconsax-react';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Card from '../Components/UI/Card';
 import useInput from '../Components/hooks/useInput';
 import styles from './Kontakt.module.css';
 
+declare var process: {
+  env: {
+    REACT_APP_SMTP_ID: string;
+    REACT_APP_TEMPLATE_ID: string;
+    REACT_APP_PUBLIC_KEY: string;
+  };
+};
+
 const Kontakt: React.FC = () => {
   const [formIsSent, setFormIsSent] = useState<boolean>(false);
+  const formRef = useRef(null);
 
   const {
     value: enteredName,
@@ -64,6 +74,22 @@ const Kontakt: React.FC = () => {
       return;
     }
 
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SMTP_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        formRef.current!,
+        process.env.REACT_APP_PUBLIC_KEY,
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        },
+      );
+
     setFormIsSent(true);
     nameReset();
     topicReset();
@@ -81,10 +107,11 @@ const Kontakt: React.FC = () => {
         </h2>
       </div>
 
-      <form onSubmit={formHandler} className='grid'>
+      <form onSubmit={formHandler} className='grid' ref={formRef}>
         <input
           type='text'
           placeholder='Imię'
+          name='user_name'
           id='name'
           className={nameHasError ? styles.error : ''}
           value={enteredName}
@@ -95,7 +122,8 @@ const Kontakt: React.FC = () => {
         <input
           type='text'
           placeholder='Temat'
-          id='company'
+          name='user_topic'
+          id='topic'
           className={topicHasError ? styles.error : ''}
           value={enteredTopic}
           onChange={topicChangeHandler}
@@ -105,6 +133,7 @@ const Kontakt: React.FC = () => {
         <input
           type='email'
           placeholder='Adres email'
+          name='user_email'
           id='email'
           className={mailHasError ? styles.error : ''}
           value={enteredMail}
@@ -115,6 +144,7 @@ const Kontakt: React.FC = () => {
         <textarea
           placeholder='Wiadomość...'
           rows={6}
+          name='user_message'
           id='message'
           className={messageHasError ? styles.error : ''}
           value={enteredMessage}
